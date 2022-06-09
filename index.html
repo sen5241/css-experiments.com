@@ -1,1 +1,164 @@
-Hi.
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS Color Wheel</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap');
+
+:root {
+}
+
+html {
+	font-family: 'ZCOOL QingKe HuangYou', sans-serif;
+	font-size: 3vh;
+	filter:  hue-rotate(-20deg) sepia(0.2) contrast(1.1);
+}
+
+h1, h2, h3, h4, h5, h6, strong, b {
+	font-weight: 400;
+}
+
+h1, p {
+	word-break: break-word;
+}
+
+h1 {
+	font-size: 8vh;
+}
+
+p {
+	font-size: 2.5vh;
+}
+
+div {
+	background-color: #22222288;
+	padding: 2vh;
+	max-width: 70vw;
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+div > *:first-child {
+	margin-top: 0px;
+}
+
+div > *:last-child {
+	margin-bottom: 0px;
+}
+
+body, a {
+	color: white;
+}
+
+div:hover {
+	opacity: 1;
+}
+
+body {
+	text-transform: uppercase;
+	margin: 0px;
+	height: 100vh;
+	width: 100vw;
+	padding: 10vh 10vw;
+	box-sizing: border-box;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	
+	background-attachment: fixed;
+
+	background-image:
+	radial-gradient(
+		circle at center,
+		hsla(0, 0%, 0%, 0.5) 0,
+		hsla(0, 0%, 0%, 0.5) 10%,
+		hsla(0, 0%, 10%, 0.45) 10%,
+		hsla(0, 0%, 10%, 0.45) 20%,
+		hsla(0, 0%, 20%, 0.40) 20%,
+		hsla(0, 0%, 20%, 0.40) 30%,
+		hsla(0, 0%, 30%, 0.35) 30%,
+		hsla(0, 0%, 30%, 0.35) 40%,
+		hsla(0, 0%, 40%, 0.3) 40%,
+		hsla(0, 0%, 40%, 0.3) 50%,
+		hsla(0, 0%, 50%, 0.3) 50%,
+		hsla(0, 0%, 50%, 0.3) 60%,
+		hsla(0, 0%, 60%, 0.35) 60%,
+		hsla(0, 0%, 60%, 0.35) 70%,
+		hsla(0, 0%, 70%, 0.4) 70%,
+		hsla(0, 0%, 70%, 0.4) 80%,
+		hsla(0, 0%, 80%, 0.45) 80%,
+		hsla(0, 0%, 80%, 0.45) 90%,
+		hsla(0, 0%, 90%, 0.5) 90%,
+		hsla(0, 0%, 90%, 0.5) 100%
+
+	),
+	
+	conic-gradient(
+		hsl(-150, 100%, 50%) 0deg,
+		hsl(-150, 100%, 50%) 15deg,
+		hsl(-135, 100%, 50%) 15deg,
+		hsl(-135, 100%, 50%) 30deg,
+		hsl(-120, 100%, 50%) 30deg,
+		hsl(-120, 100%, 50%) 45deg,
+		hsl(-105, 100%, 50%) 45deg,
+		hsl(-105, 100%, 50%) 60deg,
+		hsl(-90, 100%, 50%) 60deg,
+		hsl(-90, 100%, 50%) 75deg,
+		hsl(-75, 100%, 50%) 75deg,
+		hsl(-75, 100%, 50%) 90deg,
+		hsl(-60, 100%, 50%) 90deg,
+		hsl(-60, 100%, 50%) 105deg,
+		hsl(-45, 100%, 50%) 105deg,
+		hsl(-45, 100%, 50%) 120deg,
+		hsl(-30, 100%, 50%) 120deg,
+		hsl(-30, 100%, 50%) 135deg,
+		hsl(-15, 100%, 50%) 135deg,
+		hsl(-15, 100%, 50%) 150deg,
+		hsl(0, 100%, 50%) 150deg,
+		hsl(0, 100%, 50%) 165deg,
+		hsl(-345, 100%, 50%) 165deg,
+		hsl(-345, 100%, 50%) 180deg,
+		hsl(-330, 100%, 50%) 180deg,
+		hsl(-330, 100%, 50%) 195deg,
+		hsl(-315, 100%, 50%) 195deg,
+		hsl(-315, 100%, 50%) 210deg,
+		hsl(-300, 100%, 50%) 210deg,
+		hsl(-300, 100%, 50%) 225deg,
+		hsl(-285, 100%, 50%) 225deg,
+		hsl(-285, 100%, 50%) 240deg,
+		hsl(-270, 100%, 50%) 240deg,
+		hsl(-270, 100%, 50%) 255deg,
+		hsl(-255, 100%, 50%) 255deg,
+		hsl(-255, 100%, 50%) 270deg,
+		hsl(-240, 100%, 50%) 270deg,
+		hsl(-240, 100%, 50%) 285deg,
+		hsl(-225, 100%, 50%) 285deg,
+		hsl(-225, 100%, 50%) 300deg,
+		hsl(-210, 100%, 50%) 300deg,
+		hsl(-210, 100%, 50%) 315deg,
+		hsl(-195, 100%, 50%) 315deg,
+		hsl(-195, 100%, 50%) 330deg,
+		hsl(-180, 100%, 50%) 330deg,
+		hsl(-180, 100%, 50%) 345deg,
+		hsl(-165, 100%, 50%) 345deg,
+		hsl(-165, 100%, 50%) 360deg
+	);
+}
+</style>
+</head>
+<body>
+
+<div>
+	<h1>Color Wheel</h1>
+
+<!--
+	Hi.
+	css-experiments.com is a playground to try out some CSS-based design ideas.
+-->
+
+	<p>This example simulates a color-wheel through a semitransparent radial gradient that sits atop a conic gradient, and was inspired by <a href="https://www.maxon.net/en/event/max-on-color-june-2" target="_blank">https://www.maxon.net/en/event/max-on-color-june-2</a></p>
+</div>
+</body>
+</html>
